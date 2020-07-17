@@ -27,14 +27,14 @@ opcao = input('\nDigite a opção desejada: ')
 try:
     opcao = int(opcao)
 except ValueError:
-    system('clear')
+    system(limpar)
     print('Opção inválida! A chave deve ser numérica\nPor gentileza, tente novamente...')
     sleep(2)
 
 
 
 if opcao == 1:
-    system('clear')
+    system(limpar)
     mensagem = input('Digite a mensagem a ser cifrada: ').upper()
     letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
@@ -53,20 +53,20 @@ if opcao == 1:
                     cifrada = cifrada + ' '
 
         else:
-            system('clear')
+            system(limpar)
             print('A chave não pode ser maior que 26...')
         if(chave <= 26):
-            system('clear')
+            system(limpar)
             print(f'Mensagem criptografada:\n{cifrada.title()}')
     
     except ValueError:
-        system('clear')
+        system(limpar)
         print('A chave digitada deve ser numérica...')   
         sleep(2)
 
 
 elif opcao == 2:
-    system('clear')
+    system(limpar)
 
     letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
     traduzida = ''
@@ -82,7 +82,7 @@ elif opcao == 2:
                 traduzida = traduzida + letras[num-chave]
             elif letra == ' ':
                 traduzida = traduzida + ' '
-        system('clear')
+        system(limpar)
         if len(traduzida) != len(mensagem):
             print('Não foi possível decifrar a mensagem.\nVerifique a mensagem e a chave e tente novamente')
             sleep(2)
@@ -93,13 +93,13 @@ elif opcao == 2:
 
 
     except ValueError:
-        system('clear')
+        system(limpar)
         print('A chave digitada deve ser numérica...')
         sleep(2)
 
 
 elif opcao == 3:
-    system('clear')
+    system(limpar)
     print('*******CIFRA DE CESAR*******\n\n')
     print('\tA Cifra de César é uma técnica de criptografia bastante simples e provavelmente a mais conhecida de todas.')
     print('\tTrata-se de um tipo de cifra de substituição, na qual cada letra de um texto a ser criptografado é')
@@ -107,6 +107,6 @@ elif opcao == 3:
     sleep(2)
 
 elif opcao > 3 or opcao < 1:
-    system('clear')
+    system(limpar)
     print('Opção não encontrada... Até +')
     sleep(2)
